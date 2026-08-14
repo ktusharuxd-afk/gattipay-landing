@@ -34,6 +34,11 @@
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--text); font-size: 15px; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--green); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; display: block; }
+    .mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--border); padding: 20px 5%; flex-direction: column; gap: 20px; z-index: 99; }
+    .mobile-menu a { text-decoration: none; color: var(--text); font-size: 16px; font-weight: 600; }
+    .mobile-menu.open { display: flex; }
     .nav-cta { background: var(--green); color: var(--dark); padding: 10px 24px; border-radius: 50px; font-weight: 700; font-size: 15px; text-decoration: none; transition: background 0.2s; }
     .nav-cta:hover { background: var(--green-dark); }
 
@@ -153,11 +158,12 @@
     .footer-disclaimer { color: #333; font-size: 12px; max-width: 600px; line-height: 1.6; }
 
     /* RESPONSIVE */
-    @media (max-width: 768px) {
+   @media (max-width: 768px) {
       .hero { flex-direction: column; text-align: center; }
       .hero-btns { justify-content: center; }
       .hero-visual { margin-top: 40px; }
       .nav-links { display: none; }
+      .hamburger { display: flex; }
       .calc-wrapper { flex-direction: column; }
       .trust-bar { gap: 24px; }
     }
@@ -172,9 +178,18 @@
     <li><a href="#features">Features</a></li>
     <li><a href="#how">How it works</a></li>
     <li><a href="#networks">Networks</a></li>
+    <li><a href="https://gattipay-web.vercel.app" target="_blank" class="nav-cta">Launch App →</a></li>
   </ul>
-  <a href="https://gattipay-web.vercel.app" target="_blank" class="nav-cta">Launch App →</a>
+  <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#features" onclick="closeMenu()">Features</a>
+  <a href="#how" onclick="closeMenu()">How it works</a>
+  <a href="#networks" onclick="closeMenu()">Networks</a>
+  <a href="https://gattipay-web.vercel.app" target="_blank" class="btn-primary" style="text-align:center;">Launch App →</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -400,7 +415,14 @@
   }
 
   fetchPrices();
-  setInterval(fetchPrices, 60000);
+    setInterval(fetchPrices, 60000);
+
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
 </script>
 </body>
 </html>
