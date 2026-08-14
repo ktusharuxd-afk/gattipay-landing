@@ -420,7 +420,7 @@
 
   async function fetchPrices() {
     try {
-      const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum,binancecoin&vs_currencies=inr');
+      const res = await fetch('https://gattipay-web.vercel.app/api/prices');
       const data = await res.json();
       const eth = data.ethereum?.inr;
       const bnb = data.binancecoin?.inr;
