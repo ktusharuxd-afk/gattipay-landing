@@ -76,7 +76,7 @@
     .phone-chip { background: #222c3a; color: #94a3b8; font-size: 9px; padding: 4px 8px; border-radius: 8px; font-weight: 700; }
     .phone-actions { display: flex; justify-content: space-around; }
     .phone-action { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-    .phone-action-icon { width: 38px; height: 38px; background: #222c3a; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--green); font-size: 14px; }
+    .phone-action-icon { width: 38px; height: 38px; background: #222c3a; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--green); }
     .phone-action-label { color: #94a3b8; font-size: 9px; font-weight: 600; }
     .phone-prices-label { color: #5a6a7e; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; margin: 4px 0 8px; }
     .phone-price-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #1e2a38; }
@@ -231,10 +231,22 @@
             <span class="phone-chip">● wHON 999950.00</span>
           </div>
           <div class="phone-actions">
-            <div class="phone-action"><div class="phone-action-icon">↑</div><span class="phone-action-label">Send</span></div>
-            <div class="phone-action"><div class="phone-action-icon">↓</div><span class="phone-action-label">Receive</span></div>
-            <div class="phone-action"><div class="phone-action-icon">⊙</div><span class="phone-action-label">Scan</span></div>
-            <div class="phone-action"><div class="phone-action-icon">⇄</div><span class="phone-action-label">Swap</span></div>
+            <div class="phone-action">
+              <div class="phone-action-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
+              <span class="phone-action-label">Send</span>
+            </div>
+            <div class="phone-action">
+              <div class="phone-action-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="17" y1="7" x2="7" y2="17"/><polyline points="17 17 7 17 7 7"/></svg></div>
+              <span class="phone-action-label">Receive</span>
+            </div>
+            <div class="phone-action">
+              <div class="phone-action-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="7" y="7" width="3" height="3"/><rect x="14" y="7" width="3" height="3"/><rect x="7" y="14" width="3" height="3"/><path d="M14 14h3v3h-3z"/><path d="M3 3h4v4H3z"/><path d="M17 3h4v4h-4z"/><path d="M3 17h4v4H3z"/></svg></div>
+              <span class="phone-action-label">Scan</span>  
+            </div>
+            <div class="phone-action">
+              <div class="phone-action-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+              <span class="phone-action-label">Swap</span>
+            </div>
           </div>
         </div>
         <div class="phone-prices-label">LIVE PRICES</div>
