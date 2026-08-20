@@ -59,28 +59,35 @@
     .btn-secondary { background: transparent; color: var(--dark); padding: 16px 32px; border-radius: 50px; font-weight: 600; font-size: 16px; text-decoration: none; border: 2px solid var(--border); transition: all 0.2s; }
     .btn-secondary:hover { border-color: var(--green); color: var(--green); }
     .hero-visual { flex: 1; display: flex; justify-content: center; align-items: center; }
-    .phone-mockup {
-      width: 280px; background: var(--dark); border-radius: 40px; padding: 20px;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.2); position: relative;
-    }
-    .phone-screen { background: #111; border-radius: 28px; padding: 20px; }
-    .phone-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-    .phone-logo { color: var(--green); font-weight: 800; font-size: 16px; }
-    .phone-badge { background: rgba(6,214,160,0.15); color: var(--green); font-size: 10px; padding: 3px 8px; border-radius: 20px; font-weight: 600; }
-    .phone-card { background: var(--green); border-radius: 20px; padding: 20px; margin-bottom: 16px; }
-    .phone-card-label { color: rgba(0,0,0,0.5); font-size: 11px; margin-bottom: 4px; }
-    .phone-card-amount { color: var(--dark); font-size: 32px; font-weight: 900; letter-spacing: -1px; margin-bottom: 12px; }
-    .phone-chips { display: flex; gap: 6px; }
-    .phone-chip { background: rgba(0,0,0,0.12); color: var(--dark); font-size: 10px; padding: 3px 8px; border-radius: 20px; font-weight: 600; }
-    .phone-actions { display: flex; justify-content: space-around; margin-bottom: 16px; }
+       .phone-mockup { width: 300px; background: #0d1117; border-radius: 40px; padding: 20px; box-shadow: 0 40px 80px rgba(0,0,0,0.3); position: relative; }
+    .phone-screen { background: #0a0e14; border-radius: 28px; padding: 16px; }
+    .phone-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .phone-avatar { width: 30px; height: 30px; border-radius: 50%; background: #1a222d; border: 1.5px solid #2a3545; flex-shrink: 0; }
+    .phone-header-text { flex: 1; display: flex; flex-direction: column; }
+    .phone-addr { color: #f0f4f8; font-size: 12px; font-weight: 700; }
+    .phone-network { color: var(--green); font-size: 9px; font-weight: 600; }
+    .phone-bell { background: #121820; border: 1px solid #1e2a38; border-radius: 10px; padding: 6px 8px; font-size: 12px; }
+    .phone-card { background: linear-gradient(145deg, #121820 0%, #1a222d 100%); border: 1px solid #1e2a38; border-radius: 20px; padding: 16px; margin-bottom: 16px; }
+    .phone-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+    .phone-card-label { color: #5a6a7e; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+    .phone-wallet-pill { background: rgba(6,214,160,0.12); color: var(--green); font-size: 9px; padding: 3px 8px; border-radius: 8px; font-weight: 700; }
+    .phone-card-amount { color: #f0f4f8; font-size: 26px; font-weight: 900; letter-spacing: -1px; margin-bottom: 10px; }
+    .phone-chips { display: flex; gap: 6px; margin-bottom: 14px; }
+    .phone-chip { background: #222c3a; color: #94a3b8; font-size: 9px; padding: 4px 8px; border-radius: 8px; font-weight: 700; }
+    .phone-actions { display: flex; justify-content: space-around; }
     .phone-action { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-    .phone-action-icon { width: 44px; height: 44px; background: #1a1a2e; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: var(--green); font-size: 16px; }
-    .phone-action-label { color: #888; font-size: 10px; }
-    .phone-prices { background: #1a1a1a; border-radius: 14px; padding: 12px; }
-    .phone-price-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #222; }
+    .phone-action-icon { width: 38px; height: 38px; background: #222c3a; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--green); font-size: 14px; }
+    .phone-action-label { color: #94a3b8; font-size: 9px; font-weight: 600; }
+    .phone-prices-label { color: #5a6a7e; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; margin: 4px 0 8px; }
+    .phone-price-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #1e2a38; }
     .phone-price-row:last-child { border-bottom: none; }
-    .phone-price-name { color: #aaa; font-size: 11px; }
+    .phone-price-name { color: #94a3b8; font-size: 11px; font-weight: 600; }
     .phone-price-val { color: var(--green); font-size: 11px; font-weight: 700; }
+    .phone-nav { display: flex; justify-content: space-around; margin-top: 14px; padding-top: 14px; border-top: 1px solid #1e2a38; }
+    .phone-nav-item { display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 13px; opacity: 0.4; }
+    .phone-nav-item.active { opacity: 1; }
+    .phone-nav-item span { font-size: 8px; color: #94a3b8; font-weight: 600; }
+    .phone-nav-item.active span { color: var(--green); }
 
     /* TRUST BAR */
     .trust-bar { background: var(--dark); padding: 20px 5%; display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
